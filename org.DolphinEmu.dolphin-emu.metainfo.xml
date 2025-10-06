@@ -14,7 +14,7 @@
   <description><p>Dolphin is an emulator for two recent Nintendo video game consoles: the GameCube and the Wii. It allows PC gamers to enjoy games for these two consoles in full HD (1080p) with several enhancements: compatibility with all PC controllers, turbo speed, networked multiplayer, and even more!</p></description>
   <screenshots>
     <screenshot type="default">
-      <caption>Dolpin's main window</caption>
+      <caption>Dolphin's main window</caption>
       <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/1.png</image>
     </screenshot>
     <screenshot>
@@ -22,7 +22,7 @@
       <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/2.png</image>
     </screenshot>
     <screenshot>
-      <caption>Grapics configuration</caption>
+      <caption>Graphics configuration</caption>
       <image type="source">https://raw.githubusercontent.com/flathub/org.DolphinEmu.dolphin-emu/master/screenshots/3.png</image>
     </screenshot>
     <screenshot>
@@ -36,12 +36,8 @@
     <id>dolphin-emu.desktop</id>
   </provides>
   <releases>
-    <release version="2412" date="2024-12-02">
-      <description></description>
-    </release>
-    <release version="2409" date="2024-09-04">
-      <description/>
-    </release>
+    <release version="2412" date="2024-12-02"/>
+    <release version="2409" date="2024-09-04"/>
     <release version="2407" date="2024-07-02"/>
     <release version="5.0-21460" date="2024-04-29"/>
     <release version="5.0-21264" date="2024-03-26"/>

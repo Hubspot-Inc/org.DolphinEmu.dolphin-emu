@@ -61,7 +61,7 @@ It only requires ```bluez``` which is bundled with the Flatpak, and ```allow=blu
 
 Some popular controllers such as those on the nintendo switch and ps4/ps5 feature motion sensors that can be used to approximate some Wii remote features.
 
-Even though his bundle already ships with the necessary dependencies, depending on your distribution you may still need to manually add a udev rule to allow applications to access the motion sensors:
+Even though this bundle already ships with the necessary dependencies, depending on your distribution you may still need to manually add a udev rule to allow applications to access the motion sensors:
 
 ```SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="*Motion Sensors", TAG+="uaccess"```
 
