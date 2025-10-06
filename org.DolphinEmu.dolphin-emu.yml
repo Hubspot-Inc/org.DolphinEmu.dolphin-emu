@@ -22,7 +22,7 @@ finish-args:
   # required for Gamescope on Steam Deck
   - --filesystem=xdg-run/gamescope-0:ro
 modules:
-  # needed for the bluetooth passthrough feature to work
+  # needed for the USB passthrough feature to work
   - name: libusb
     config-opts:
       - --disable-static
