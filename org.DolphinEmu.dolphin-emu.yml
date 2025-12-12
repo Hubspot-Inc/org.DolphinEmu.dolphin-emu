@@ -1,6 +1,6 @@
 app-id: org.DolphinEmu.dolphin-emu
 runtime: org.kde.Platform
-runtime-version: '6.8'
+runtime-version: '6.9'
 sdk: org.kde.Sdk
 command: dolphin-emu-wrapper
 rename-desktop-file: dolphin-emu.desktop
@@ -18,7 +18,11 @@ finish-args:
   # required for the emulated bluetooth adapter feature to work.
   - --allow=bluetooth
   - --filesystem=xdg-run/app/com.discordapp.Discord:create
+  # required for screensaver inhibition on desktops with
+  # old or defective portal implementations.
   - --talk-name=org.freedesktop.ScreenSaver
+  - --talk-name=org.xfce.ScreenSaver
+  - --talk-name=org.mate.ScreenSaver
   # required for Gamescope on Steam Deck
   - --filesystem=xdg-run/gamescope-0:ro
 modules:
@@ -32,8 +36,8 @@ modules:
       - /lib/pkgconfig
     sources:
       - type: archive
-        url: https://github.com/libusb/libusb/releases/download/v1.0.27/libusb-1.0.27.tar.bz2
-        sha256: ffaa41d741a8a3bee244ac8e54a72ea05bf2879663c098c82fc5757853441575
+        url: https://github.com/libusb/libusb/releases/download/v1.0.29/libusb-1.0.29.tar.bz2
+        sha256: 5977fc950f8d1395ccea9bd48c06b3f808fd3c2c961b44b0c2e6e29fc3a70a85
         x-checker-data:
           type: anitya
           project-id: 1749
@@ -49,21 +53,13 @@ modules:
       - -Ddocumentation=disabled
     sources:
       - type: archive
-        url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.3.tar.xz
-        sha256: abf1aace86208eebdd5d3550ffded4c8d73bb405b796d51c389c9d0604cbcfbf
+        url: https://www.freedesktop.org/software/libevdev/libevdev-1.13.4.tar.xz
+        sha256: f00ab8d42ad8b905296fab67e13b871f1a424839331516642100f82ad88127cd
         x-checker-data:
           type: anitya
           project-id: 20540
           stable-only: true
           url-template: https://www.freedesktop.org/software/libevdev/libevdev-$version.tar.xz
-
-  # needed for screensaver inhibition
-  - name: xdg-screensaver-shim
-    buildsystem: meson
-    sources:
-      - type: archive
-        url: https://github.com/Unrud/xdg-screensaver-shim/archive/0.0.2.tar.gz
-        sha256: 0ed2a69fe6ee6cbffd2fe16f85116db737f17fb1e79bfb812d893cf15c728399
 
   - name: dolphin-emu
     buildsystem: cmake-ninja
@@ -83,7 +79,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/dolphin-emu/dolphin.git
-        commit: 992b4ea9309899ebc7ca576ebea711a70523098a
+        commit: f0519d4f6cfa650846674d0b15849035b4c27e74
         x-checker-data:
           type: json
           url: https://dolphin-emu.org/update/latest/beta
