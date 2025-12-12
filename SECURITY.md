@@ -2,20 +2,20 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The following versions of Dolphin Emulator are currently supported with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
+| 5.0     | :white_check_mark: |
+| 4.0     | :x:                |
 | < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability in Dolphin Emulator, please report it by emailing **security@dolphin-emu.org**.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Please include as much detail as possible, including steps to reproduce the issue and any relevant logs or screenshots.
+
+We aim to respond to security reports within **5 business days**. After triage, you will be kept informed of our progress and notified when the issue is resolved or if further information is required.
+
+Thank you for helping us keep Dolphin Emulator safe for everyone.
